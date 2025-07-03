@@ -129,51 +129,37 @@
         <h1>Contact Us</h1>
         <p class="description">アプリの要望・相談があったらこちらからお願いします<br>If you have any requests or questions about the app, please let us know</p>
         
-        <div class="form-group">
-            <label for="name">お名前 / Name</label>
-            <input type="text" id="name" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="email">メールアドレス / Email</label>
-            <input type="email" id="email" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="subject">件名 / Subject</label>
-            <input type="text" id="subject" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="message">メッセージ / Message</label>
-            <textarea id="message" required></textarea>
-        </div>
-        
-        <button type="button" id="sendButton">メールで送信 / Send via Email</button>
-        
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const sendButton = document.getElementById('sendButton');
+        <div style="text-align: center;">
+            <div style="background-color: #f0f0f0; padding: 30px; border-radius: 8px; margin: 20px 0;">
+                <h3 style="color: #007AFF; margin-bottom: 20px;">お問い合わせ方法 / How to Contact</h3>
                 
-                sendButton.addEventListener('click', function() {
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const subject = document.getElementById('subject').value;
-                    const message = document.getElementById('message').value;
-                    
-                    if (!name || !email || !subject || !message) {
-                        alert('すべての項目を入力してください / Please fill in all fields');
-                        return;
-                    }
-                    
-                    const body = encodeURIComponent(`名前 / Name: ${name}\nメール / Email: ${email}\n\nメッセージ / Message:\n${message}`);
-                    const encodedSubject = encodeURIComponent(`BodyLapse: ${subject}`);
-                    const mailtoLink = `mailto:ajitama.kojok@gmail.com?subject=${encodedSubject}&body=${body}`;
-                    
-                    window.location.href = mailtoLink;
-                });
-            });
-        </script>
+                <p style="margin-bottom: 20px;">
+                    以下のボタンをクリックしてメールでお問い合わせください<br>
+                    Click the button below to send us an email
+                </p>
+                
+                <a href="mailto:ajitama.kojok@gmail.com?subject=BodyLapse%20App%20Inquiry" 
+                   style="display: inline-block; padding: 15px 40px; background-color: #007AFF; color: white; text-decoration: none; border-radius: 8px; font-size: 1.1em; margin: 10px;">
+                    メールを送信 / Send Email
+                </a>
+                
+                <div style="margin-top: 30px; text-align: left; max-width: 500px; margin-left: auto; margin-right: auto;">
+                    <p style="font-weight: bold; margin-bottom: 10px;">メールに記載いただきたい内容 / Please include:</p>
+                    <ul style="list-style-type: disc; margin-left: 20px;">
+                        <li>お名前 / Your name</li>
+                        <li>件名 / Subject of inquiry</li>
+                        <li>お問い合わせ内容 / Your message</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <p style="color: #666;">
+                    メールアドレス / Email address:<br>
+                    <strong style="color: #007AFF; font-size: 1.2em;">ajitama.kojok@gmail.com</strong>
+                </p>
+            </div>
+        </div>
         
         <div class="back-link">
             <a href="index.html">← Back to Home</a>
