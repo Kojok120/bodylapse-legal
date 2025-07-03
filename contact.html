@@ -204,14 +204,11 @@
             
             // フォームデータを準備
             const formData = new FormData();
-            formData.append('access_key', '65ea5180-18f4-48ab-b4bc-dc200713e11f'); // ここにWeb3FormsのAccess Keyを設定
+            formData.append('access_key', '65ea5180-18f4-48ab-b4bc-dc200713e11f');
             formData.append('name', document.getElementById('name').value);
             formData.append('email', document.getElementById('email').value);
-            formData.append('subject', document.getElementById('subject').value);
+            formData.append('subject', `BodyLapse Contact: ${document.getElementById('subject').value}`);
             formData.append('message', document.getElementById('message').value);
-            
-            // ajitama.kojok@gmail.com にメールが届くように設定
-            formData.append('redirect', 'https://web3forms.com/success');
             
             try {
                 const response = await fetch('https://api.web3forms.com/submit', {
@@ -220,6 +217,7 @@
                 });
                 
                 const data = await response.json();
+                console.log('Response:', data); // デバッグ用
                 
                 if (data.success) {
                     // 成功メッセージを表示
@@ -228,7 +226,8 @@
                     // フォームをリセット
                     document.getElementById('contactForm').reset();
                 } else {
-                    throw new Error('送信に失敗しました');
+                    console.error('Error details:', data);
+                    throw new Error(data.message || '送信に失敗しました');
                 }
                 
             } catch (error) {
