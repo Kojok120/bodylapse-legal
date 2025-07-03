@@ -149,25 +149,30 @@
             <textarea id="message" required></textarea>
         </div>
         
-        <button type="button" onclick="sendEmail()">メールで送信 / Send via Email</button>
+        <button type="button" id="sendButton">メールで送信 / Send via Email</button>
         
         <script>
-            function sendEmail() {
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const subject = document.getElementById('subject').value;
-                const message = document.getElementById('message').value;
+            document.addEventListener('DOMContentLoaded', function() {
+                const sendButton = document.getElementById('sendButton');
                 
-                if (!name || !email || !subject || !message) {
-                    alert('すべての項目を入力してください / Please fill in all fields');
-                    return;
-                }
-                
-                const body = `名前 / Name: ${name}%0D%0Aメール / Email: ${email}%0D%0A%0D%0Aメッセージ / Message:%0D%0A${message}`;
-                const mailtoLink = `mailto:ajitama.kojok@gmail.com?subject=BodyLapse: ${subject}&body=${body}`;
-                
-                window.location.href = mailtoLink;
-            }
+                sendButton.addEventListener('click', function() {
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value;
+                    
+                    if (!name || !email || !subject || !message) {
+                        alert('すべての項目を入力してください / Please fill in all fields');
+                        return;
+                    }
+                    
+                    const body = encodeURIComponent(`名前 / Name: ${name}\nメール / Email: ${email}\n\nメッセージ / Message:\n${message}`);
+                    const encodedSubject = encodeURIComponent(`BodyLapse: ${subject}`);
+                    const mailtoLink = `mailto:ajitama.kojok@gmail.com?subject=${encodedSubject}&body=${body}`;
+                    
+                    window.location.href = mailtoLink;
+                });
+            });
         </script>
         
         <div class="back-link">
