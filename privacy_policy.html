@@ -136,7 +136,7 @@
 <body>
     <div class="container">
         <h1>BodyLapse Privacy Policy / プライバシーポリシー</h1>
-        <p class="update-date">Last Updated: June 30, 2025 / 最終更新日: 2025年6月30日</p>
+        <p class="update-date">Last Updated: July 5, 2025 / 最終更新日: 2025年7月5日</p>
         
         <div class="toc">
             <h3>Table of Contents / 目次</h3>
@@ -244,6 +244,41 @@
                 <li>Delete all app data by uninstalling the app</li>
             </ul>
             
+            <h3>Face Data Collection and Usage</h3>
+            <p>BodyLapse uses face detection technology exclusively for privacy protection purposes. Here's detailed information about our face data practices:</p>
+            
+            <h4>Face Data We Process</h4>
+            <ul>
+                <li><strong>Face Detection for Blur</strong>: We use Apple's Vision framework (VNDetectFaceRectanglesRequest) to detect face locations in photos</li>
+                <li><strong>Processing Duration</strong>: Face rectangles are detected and immediately used for blurring, then discarded within milliseconds</li>
+                <li><strong>Data Stored</strong>: Only a boolean flag indicating whether face blur was applied to each photo</li>
+                <li><strong>Face ID/Touch ID</strong>: Used only for app authentication via iOS LocalAuthentication (no face data collected by the app)</li>
+            </ul>
+            
+            <h4>Face Data We Do NOT Collect</h4>
+            <ul>
+                <li>Facial features, characteristics, or biometric templates</li>
+                <li>Face identification or recognition data</li>
+                <li>Persistent storage of face coordinates or measurements</li>
+                <li>Any face data that could identify individuals</li>
+            </ul>
+            
+            <h4>Purpose and Usage</h4>
+            <ul>
+                <li><strong>Single Purpose</strong>: Face detection is used exclusively to apply privacy blur to faces in photos</li>
+                <li><strong>User Control</strong>: Face blur is entirely optional and controlled by user preference</li>
+                <li><strong>On-Device Only</strong>: All face detection and processing happens locally on your device</li>
+                <li><strong>No Analysis</strong>: We do not analyze, profile, or identify faces</li>
+            </ul>
+            
+            <h4>Data Sharing and Retention</h4>
+            <ul>
+                <li><strong>No Sharing</strong>: Face data never leaves your device and is never shared with third parties</li>
+                <li><strong>Temporary Processing</strong>: Face rectangles exist only during blur processing (milliseconds)</li>
+                <li><strong>Metadata Retention</strong>: The blur flag is retained as long as the associated photo exists</li>
+                <li><strong>User Deletion</strong>: When you delete a photo, all associated data including the blur flag is permanently deleted</li>
+            </ul>
+            
             <h3>Your Rights and Choices</h3>
             <ol>
                 <li><strong>Photo Management</strong>: Delete any photo directly from the app</li>
@@ -251,6 +286,7 @@
                 <li><strong>Notifications</strong>: Enable/disable in Settings</li>
                 <li><strong>Health Data</strong>: Control access through iOS Settings > Privacy > Health</li>
                 <li><strong>Ad Personalization</strong>: Manage through iOS Settings > Privacy > Advertising</li>
+                <li><strong>Face Blur Control</strong>: Enable/disable face blur feature at any time in camera settings</li>
             </ol>
             
             <h3>Children's Privacy</h3>
@@ -366,6 +402,41 @@
                 <li>アプリをアンインストールすることですべてのデータを削除</li>
             </ul>
             
+            <h3>顔データの収集と使用</h3>
+            <p>BodyLapseは、プライバシー保護の目的でのみ顔検出技術を使用しています。顔データの取り扱いに関する詳細情報：</p>
+            
+            <h4>処理する顔データ</h4>
+            <ul>
+                <li><strong>ぼかし用の顔検出</strong>：AppleのVisionフレームワーク（VNDetectFaceRectanglesRequest）を使用して写真内の顔の位置を検出</li>
+                <li><strong>処理時間</strong>：顔の矩形を検出し、即座にぼかし処理に使用した後、ミリ秒以内に破棄</li>
+                <li><strong>保存データ</strong>：各写真に顔ぼかしが適用されたかを示すブール値フラグのみ</li>
+                <li><strong>Face ID/Touch ID</strong>：iOS LocalAuthenticationを介したアプリ認証のみに使用（アプリによる顔データ収集なし）</li>
+            </ul>
+            
+            <h4>収集しない顔データ</h4>
+            <ul>
+                <li>顔の特徴、特性、生体認証テンプレート</li>
+                <li>顔識別または認識データ</li>
+                <li>顔座標や測定値の永続的な保存</li>
+                <li>個人を特定できる顔データ</li>
+            </ul>
+            
+            <h4>目的と使用方法</h4>
+            <ul>
+                <li><strong>単一目的</strong>：顔検出は写真の顔にプライバシーぼかしを適用する目的でのみ使用</li>
+                <li><strong>ユーザー制御</strong>：顔ぼかしは完全にオプションで、ユーザーの設定により制御</li>
+                <li><strong>端末内処理のみ</strong>：すべての顔検出と処理はお使いの端末上でローカルに実行</li>
+                <li><strong>分析なし</strong>：顔の分析、プロファイリング、識別は行いません</li>
+            </ul>
+            
+            <h4>データ共有と保持期間</h4>
+            <ul>
+                <li><strong>共有なし</strong>：顔データは端末から送信されず、第三者と共有されることはありません</li>
+                <li><strong>一時的な処理</strong>：顔の矩形はぼかし処理中のみ存在（ミリ秒単位）</li>
+                <li><strong>メタデータの保持</strong>：ぼかしフラグは関連する写真が存在する限り保持</li>
+                <li><strong>ユーザーによる削除</strong>：写真を削除すると、ぼかしフラグを含むすべての関連データが完全に削除</li>
+            </ul>
+            
             <h3>お客様の権利と選択</h3>
             <ol>
                 <li><strong>写真管理</strong>：アプリから直接写真を削除</li>
@@ -373,6 +444,7 @@
                 <li><strong>通知</strong>：設定で有効/無効を切り替え</li>
                 <li><strong>ヘルスデータ</strong>：iOS設定 > プライバシー > ヘルスケアでアクセスを制御</li>
                 <li><strong>広告のパーソナライズ</strong>：iOS設定 > プライバシー > 広告で管理</li>
+                <li><strong>顔ぼかし制御</strong>：カメラ設定でいつでも顔ぼかし機能を有効/無効に切り替え</li>
             </ol>
             
             <h3>子供のプライバシー</h3>
