@@ -136,7 +136,7 @@
 <body>
     <div class="container">
         <h1>BodyLapse Privacy Policy / プライバシーポリシー</h1>
-        <p class="update-date">Last Updated: July 5, 2025 / 最終更新日: 2025年7月5日</p>
+        <p class="update-date">Last Updated: November 8, 2026 / 最終更新日: 2026年11月8日</p>
         
         <div class="toc">
             <h3>Table of Contents / 目次</h3>
@@ -196,17 +196,27 @@
             
             <h3>Data Storage and Security</h3>
             
-            <h4>Local Storage Only</h4>
+            <h4>On-Device Storage</h4>
             <ul>
                 <li><strong>Photos</strong>: Stored in app's private Documents/Photos directory</li>
                 <li><strong>Metadata</strong>: Photo information saved in local JSON files</li>
                 <li><strong>Settings</strong>: Stored in iOS UserDefaults</li>
                 <li><strong>Authentication</strong>: Passwords stored in iOS Keychain</li>
             </ul>
-            
+
+            <h4>iCloud Backup (Pro)</h4>
+            <ul>
+                <li><strong>What is backed up</strong>: If you subscribe to BodyLapse Pro, your photos, videos (you can exclude them), weight and body fat records, memos, and categories are backed up to your own iCloud account</li>
+                <li><strong>Where it is stored</strong>: In the private CloudKit database of your iCloud account, provided by Apple. We do not send this data to our own servers, and we cannot see the contents of your backup</li>
+                <li><strong>When it runs</strong>: Automatic backup is on by default for Pro subscribers. It runs at most about once a day after you take a new photo, and only on Wi-Fi. You can also back up manually at any time</li>
+                <li><strong>Your control</strong>: You can turn off automatic backup or video backup in the app under Settings &gt; iCloud Backup, and restore your data from iCloud on another device or after reinstalling the app</li>
+                <li><strong>Deletion</strong>: Deleting the app does not delete your iCloud backup. You can delete it from iOS Settings &gt; [your name] &gt; iCloud &gt; Manage Account Storage</li>
+                <li>The backup uses your iCloud storage and is subject to <a href="https://www.apple.com/legal/internet-services/icloud/" target="_blank">Apple's iCloud Terms and Conditions</a> and <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's Privacy Policy</a></li>
+            </ul>
+
             <h4>Security Measures</h4>
             <ul>
-                <li>All data remains on your device unless you explicitly share it</li>
+                <li>Your data stays on your device, except when you share it yourself or when Pro iCloud backup stores it in your own iCloud account</li>
                 <li>App data is protected by iOS sandbox security</li>
                 <li>Optional Face ID/Touch ID or passcode protection</li>
                 <li>Photos can be blurred to protect facial privacy</li>
@@ -226,22 +236,23 @@
                 <li><strong>HealthKit</strong>: For weight/body fat data sync (requires explicit permission)</li>
                 <li><strong>StoreKit</strong>: For premium subscription management</li>
                 <li><strong>Local Authentication</strong>: For Face ID/Touch ID functionality</li>
+                <li><strong>CloudKit (iCloud)</strong>: For Pro iCloud backup to your own iCloud account</li>
             </ul>
-            
+
             <h3>Data Sharing</h3>
             <p><strong>We do NOT:</strong></p>
             <ul>
-                <li>Upload your photos to any server</li>
+                <li>Upload your photos or other data to our own servers</li>
                 <li>Share your personal data with third parties</li>
                 <li>Access your photos without your action</li>
-                <li>Store any data outside your device</li>
             </ul>
-            
+            <p>Your data leaves your device only when you share it yourself, or when Pro iCloud backup stores it in your own iCloud account.</p>
+
             <p><strong>You CAN:</strong></p>
             <ul>
                 <li>Export and share time-lapse videos</li>
                 <li>Share comparison photos</li>
-                <li>Delete all app data by uninstalling the app</li>
+                <li>Delete all app data on your device by uninstalling the app (an iCloud backup, if any, is deleted separately as described above)</li>
             </ul>
             
             <h3>Face Data Collection and Usage</h3>
@@ -273,7 +284,7 @@
             
             <h4>Data Sharing and Retention</h4>
             <ul>
-                <li><strong>No Sharing</strong>: Face data never leaves your device and is never shared with third parties</li>
+                <li><strong>No Sharing</strong>: Face detection results never leave your device and are never shared with third parties (the photos themselves are included in your Pro iCloud backup if it is on)</li>
                 <li><strong>Temporary Processing</strong>: Face rectangles exist only during blur processing (milliseconds)</li>
                 <li><strong>Metadata Retention</strong>: The blur flag is retained as long as the associated photo exists</li>
                 <li><strong>User Deletion</strong>: When you delete a photo, all associated data including the blur flag is permanently deleted</li>
@@ -287,8 +298,9 @@
                 <li><strong>Health Data</strong>: Control access through iOS Settings > Privacy > Health</li>
                 <li><strong>Ad Personalization</strong>: Manage through iOS Settings > Privacy > Advertising</li>
                 <li><strong>Face Blur Control</strong>: Enable/disable face blur feature at any time in camera settings</li>
+                <li><strong>iCloud Backup</strong>: Turn automatic backup on/off in the app's settings, restore from iCloud, or delete the backup from iOS iCloud storage settings</li>
             </ol>
-            
+
             <h3>Children's Privacy</h3>
             <p>BodyLapse is not intended for children under 13. We do not knowingly collect information from children under 13.</p>
             
@@ -354,17 +366,27 @@
             
             <h3>データの保存とセキュリティ</h3>
             
-            <h4>ローカル保存のみ</h4>
+            <h4>端末内の保存</h4>
             <ul>
                 <li><strong>写真</strong>：アプリ専用のDocuments/Photosディレクトリに保存</li>
                 <li><strong>メタデータ</strong>：写真情報はローカルのJSONファイルに保存</li>
                 <li><strong>設定</strong>：iOS UserDefaultsに保存</li>
                 <li><strong>認証情報</strong>：パスワードはiOS Keychainに保存</li>
             </ul>
-            
+
+            <h4>iCloudバックアップ（Pro）</h4>
+            <ul>
+                <li><strong>バックアップする内容</strong>：BodyLapse Proをご利用の場合、写真、動画（含めないようにできます）、体重・体脂肪率の記録、メモ、カテゴリを、お客様ご自身のiCloudアカウントにバックアップします</li>
+                <li><strong>保存先</strong>：Appleが提供する、お客様のiCloudアカウントのCloudKitプライベートデータベースです。当アプリの開発者のサーバーには送信せず、開発者がバックアップの中身を見ることはできません</li>
+                <li><strong>実行のタイミング</strong>：Proでは自動バックアップが最初からオンになっています。新しい写真を撮ったときに1日1回程度、Wi-Fi接続時のみ実行します。手動でいつでもバックアップすることもできます</li>
+                <li><strong>お客様による管理</strong>：アプリの「設定」＞「クラウドバックアップ」で、自動バックアップや動画のバックアップをオフにできます。別の端末やアプリの再インストール後に、iCloudから復元できます</li>
+                <li><strong>削除</strong>：アプリを削除しても、iCloudのバックアップは削除されません。iOSの「設定」＞［ユーザ名］＞「iCloud」＞「アカウントのストレージを管理」から削除できます</li>
+                <li>バックアップはお客様のiCloudストレージを使用し、<a href="https://www.apple.com/legal/internet-services/icloud/" target="_blank">AppleのiCloud利用規約</a>と<a href="https://www.apple.com/legal/privacy/" target="_blank">Appleのプライバシーポリシー</a>が適用されます</li>
+            </ul>
+
             <h4>セキュリティ対策</h4>
             <ul>
-                <li>すべてのデータは明示的に共有しない限り端末内に留まります</li>
+                <li>データは端末内に保存されます。端末の外に出るのは、お客様ご自身が共有したときと、ProのiCloudバックアップでお客様ご自身のiCloudに保存するときだけです</li>
                 <li>アプリデータはiOSサンドボックスセキュリティで保護されています</li>
                 <li>オプションでFace ID/Touch IDまたはパスコード保護が可能</li>
                 <li>顔のプライバシー保護のために写真をぼかすことができます</li>
@@ -384,22 +406,23 @@
                 <li><strong>HealthKit</strong>：体重/体脂肪データの同期用（明示的な許可が必要）</li>
                 <li><strong>StoreKit</strong>：プレミアム購読管理用</li>
                 <li><strong>Local Authentication</strong>：Face ID/Touch ID機能用</li>
+                <li><strong>CloudKit（iCloud）</strong>：お客様ご自身のiCloudへのProのiCloudバックアップ用</li>
             </ul>
-            
+
             <h3>データの共有</h3>
             <p><strong>当アプリは以下を行いません：</strong></p>
             <ul>
-                <li>写真をサーバーにアップロード</li>
+                <li>写真やその他のデータを開発者のサーバーにアップロード</li>
                 <li>個人データを第三者と共有</li>
                 <li>ユーザーの操作なしに写真にアクセス</li>
-                <li>端末外にデータを保存</li>
             </ul>
-            
+            <p>データが端末の外に出るのは、お客様ご自身が共有したときと、ProのiCloudバックアップでお客様ご自身のiCloudに保存するときだけです。</p>
+
             <p><strong>ユーザーは以下が可能です：</strong></p>
             <ul>
                 <li>タイムラプス動画のエクスポートと共有</li>
                 <li>比較写真の共有</li>
-                <li>アプリをアンインストールすることですべてのデータを削除</li>
+                <li>アプリをアンインストールすることで端末内のすべてのデータを削除（iCloudのバックアップがある場合は、上記の方法で別に削除します）</li>
             </ul>
             
             <h3>顔データの収集と使用</h3>
@@ -431,7 +454,7 @@
             
             <h4>データ共有と保持期間</h4>
             <ul>
-                <li><strong>共有なし</strong>：顔データは端末から送信されず、第三者と共有されることはありません</li>
+                <li><strong>共有なし</strong>：顔検出の結果は端末から送信されず、第三者と共有されることはありません（写真そのものは、ProのiCloudバックアップがオンの場合にバックアップに含まれます）</li>
                 <li><strong>一時的な処理</strong>：顔の矩形はぼかし処理中のみ存在（ミリ秒単位）</li>
                 <li><strong>メタデータの保持</strong>：ぼかしフラグは関連する写真が存在する限り保持</li>
                 <li><strong>ユーザーによる削除</strong>：写真を削除すると、ぼかしフラグを含むすべての関連データが完全に削除</li>
@@ -445,6 +468,7 @@
                 <li><strong>ヘルスデータ</strong>：iOS設定 > プライバシー > ヘルスケアでアクセスを制御</li>
                 <li><strong>広告のパーソナライズ</strong>：iOS設定 > プライバシー > 広告で管理</li>
                 <li><strong>顔ぼかし制御</strong>：カメラ設定でいつでも顔ぼかし機能を有効/無効に切り替え</li>
+                <li><strong>iCloudバックアップ</strong>：アプリの設定で自動バックアップのオン/オフを切り替え、iCloudから復元し、iOSのiCloudストレージの設定からバックアップを削除</li>
             </ol>
             
             <h3>子供のプライバシー</h3>
